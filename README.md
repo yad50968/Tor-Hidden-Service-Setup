@@ -6,8 +6,10 @@ Apache : 2.4.23
 
 ### Step
 ##### Install MacPort
-  Download the [MacPort.pkg](https://github.com/macports/macports-base/releases/download/v2.4.0/MacPorts-2.4.0-10.12-Sierra.pkg)<br>
+```
+  Download the [`MacPort.pkg`](https://github.com/macports/macports-base/releases/download/v2.4.0/MacPorts-2.4.0-10.12-Sierra.pkg)<br>
   Install , it may install under /opt/local/bin/
+```
 
 ##### Install tor
 ```
