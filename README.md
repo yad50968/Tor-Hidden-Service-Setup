@@ -5,26 +5,30 @@ OS : MacOSX Sierra 10.12.2 <br>
 Apache : 2.4.23
 
 ### Step
-##### Install MacPort
+#### Install MacPort
 ```
-  Download the [`MacPort.pkg`](https://github.com/macports/macports-base/releases/download/v2.4.0/MacPorts-2.4.0-10.12-Sierra.pkg)<br>
+  Download the MacPort.pkg
+  From https://github.com/macports/macports-base/releases/download/v2.4.0/MacPorts-2.4.0-10.12-Sierra.pkg
+  
   Install , it may install under /opt/local/bin/
 ```
 
-##### Install tor
+#### Install tor
 ```
   sudo port install tor
 ```
 
-##### Make a directory, use to store sk, onion url
+#### Make a directory, use to store sk, onion url
 ```
   cd /Users/{Your-home-name}
   mkdir hidden-service
   shdo chmod 700 hidden-service  # You can't give the folder too permissive
 ```
-##### Modify the torrc
+#### Modify the torrc
 
-  After you install tor, /usr/local/ect/tor/ has torrc.sample
+  After install tor
+  /usr/local/ect/tor/ has torrc.sample
+  Modify it!
 ```
   sudo cp torrc.sample torrc
   sudo vim torrc
@@ -36,21 +40,21 @@ Apache : 2.4.23
   HiddenServiceDir /Users/{Your-home-name}/hidden-service/  # Absolute path
   HiddenServicePort 80 127.0.0.1:80   # first port : for tor,  second port : for your server
 ```
-##### Run tor
+#### Run tor
 ``` 
   Use console, run tor
   
   It will generate the private key file and onion url file
   in the hidden-service/
 ```
-##### Run Apache
+#### Run Apache
 ```
   sudo apacthe start
 ```
 
-##### Open tor browser
+#### Open tor browser
 ```
-  Connect to the url under the hidden-service/
+  Connect to the onion url in the hidden-service/hostname/
 ```
 
 ### Reference
