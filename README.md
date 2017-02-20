@@ -35,10 +35,19 @@ Apache : 2.4.23
 ```
   Insert the following to torrc
 ```
-  SocksPort 9050 # You have to open this port! See reference 3
+  SocksPort 9050 # You have to open this port!
   SockListenAddress 127.0.0.1
   HiddenServiceDir /Users/{Your-home-name}/hidden-service/  # Absolute path
   HiddenServicePort 80 127.0.0.1:80   # first port : for tor,  second port : for your server
+```
+
+#### Open the port( if necessary)
+```
+  sudo vim /etc/pf.conf
+  Insert following
+       pass in proto tcp from any to any port 9050 # open port 9050
+  
+  sudo pfctl -vnf /ect/pf.conf
 ```
 #### Run tor
 ``` 
