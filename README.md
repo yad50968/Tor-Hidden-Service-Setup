@@ -40,6 +40,14 @@ Apache : 2.4.23
   HiddenServiceDir /Users/{Your-home-name}/hidden-service/  # Absolute path
   HiddenServicePort 80 127.0.0.1:80   # first port : for tor,  second port : for your server
 ```
+#### Modify the httpd
+```
+  sudo vim /etc/apache2/httpd.conf
+  
+  ServerName {your onion address} 
+  # ex : jn4nshpywumoda7s.onion:80
+  
+```
 
 #### Open the port( if necessary)
 ```
