@@ -1,27 +1,27 @@
 # Tor-Hidden-Service-Setup
 
-### Evirement
-OS : MacOSX Sierra 10.12.2
+### Environment
+OS : MacOSX Sierra 10.12.2 <br>
 Apache : 2.4.23
 
 ### Step
-1. Install MacPort
+##### Install MacPort
 ```
   Download the .pkg https://github.com/macports/macports-base/releases/download/v2.4.0/MacPorts-2.4.0-10.12-Sierra.pkg
   Install , it may install under /opt/local/bin/
 ```
-2. Install tor
+##### Install tor
 ```
   sudo port install tor
 ```
 
-3. Make a directory, use to store some information
+##### Make a directory, use to store some information
 ```
   cd /Users/{Your-home-name}
   mkdir hidden-service
   shdo chmod 700 hidden-service  # You can't give the folder too permissive
 ```
-4. Modify the torrc
+##### Modify the torrc
 
   After you install tor, /usr/local/ect/tor/ has torrc.sample
 ```
@@ -35,16 +35,16 @@ Apache : 2.4.23
   HiddenServiceDir /Users/{Your-home-name}/hidden-service/  # Absolute path
   HiddenServicePort 80 127.0.0.1:80   # first port : for tor,  second port : for your server
 ```
-5. Run tor
+##### Run tor
 ``` 
   Use console, run tor
 ```
-6. Run Apache
+##### Run Apache
 ```
   sudo apacthe start
 ```
 
-7. Open tor browser
+##### Open tor browser
 ```
   Connect to the url under the hidden-service/
 ```
