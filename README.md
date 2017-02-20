@@ -26,14 +26,14 @@ Apache : 2.4.23
 ```
 #### Modify the torrc
 
-  After install tor
-  /usr/local/ect/tor/ has torrc.sample
+  After install tor <br>
+  /usr/local/ect/tor/ has torrc.sample <br>
   Modify it!
 ```
   sudo cp torrc.sample torrc
   sudo vim torrc
 ```
-  Insert the following
+  Insert the following to torrc
 ```
   SocksPort 9050 # You have to open this port! See reference 3
   SockListenAddress 127.0.0.1
