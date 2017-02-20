@@ -6,16 +6,15 @@ Apache : 2.4.23
 
 ### Step
 ##### Install MacPort
-```
-  Download the [MacPort.pkg](https://github.com/macports/macports-base/releases/download/v2.4.0/MacPorts-2.4.0-10.12-Sierra.pkg)
+  Download the [MacPort.pkg](https://github.com/macports/macports-base/releases/download/v2.4.0/MacPorts-2.4.0-10.12-Sierra.pkg)<br>
   Install , it may install under /opt/local/bin/
-```
+
 ##### Install tor
 ```
   sudo port install tor
 ```
 
-##### Make a directory, use to store some information
+##### Make a directory, use to store sk, onion url
 ```
   cd /Users/{Your-home-name}
   mkdir hidden-service
@@ -38,6 +37,9 @@ Apache : 2.4.23
 ##### Run tor
 ``` 
   Use console, run tor
+  
+  It will generate the private key file and onion url file
+  in the hidden-service/
 ```
 ##### Run Apache
 ```
