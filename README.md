@@ -22,7 +22,7 @@ Apache : 2.4.23
 ```
   cd /Users/{Your-home-name}
   mkdir hidden-service
-  shdo chmod 700 hidden-service  # You can't give the folder too permissive
+  sudo chmod 700 hidden-service  # You can't give the folder too permissive
 ```
 #### Modify the torrc
 
@@ -66,7 +66,7 @@ Apache : 2.4.23
 ```
 #### Run Apache
 ```
-  sudo apacthe start
+  sudo apachectl start
 ```
 
 #### Open tor browser
